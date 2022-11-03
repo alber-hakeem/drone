@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="Alber"
+               id="20221102_messages"
+               objectQuotingStrategy="LEGACY">
+        <insert tableName="locale_message">
+            <column name="code" value="MISSING_PARAMETER"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value=" parameter is missing"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="MEDIA_TYPE_NOT_SUPPORTED"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value=" media type is not supported. Supported media types are "/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="METHOD_NOT_FOUND"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Could not find the %s method for URL %s"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="DATABASE_ERROR"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Database error"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="PARAMETER_MISMATCH"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="The parameter '%s' of value '%s' could not be converted to type '%s'"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="MALFORMED_JSON_REQUEST"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Malformed JSON request"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="ERROR_WRITING_JSON"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Error writing JSON output"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="USERNAME_IS_MISSING"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Username is empty"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="USER_IS_NOT_FOUND"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="User is not found"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="PASSWORD_EMPTY"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Password can't be empty"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="UNAUTHORIZED"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Authentication is required"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="FORBIDDEN"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Access is forbidden"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="UNEXPECTED_ERROR"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Unexpected error has occurred!"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="VALIDATION_ERROR"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Validation Error!"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="TRANSACTION_SYSTEM_ERROR"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="General transaction system error is encountered!"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="USER_ALREADY_EXIST"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="User already exist!"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="Item_IS_NOT_FOUND"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Item is not found"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="INCORRECT_USERNAME_OR_PASSWORD"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Incorrect username or password"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="INVALID_CODE"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Invalid code"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="ITEM_ALREADY_EXIST"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Item already exist"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="IS_NOT_FOUND"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="is not found"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="REQUEST_SUCCESS"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Success!"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="REQUEST_FAILED"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Failed!"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
