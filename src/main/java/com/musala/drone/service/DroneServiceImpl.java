@@ -6,6 +6,7 @@ import com.musala.drone.dto.DroneBatteryCapacityDto;
 import com.musala.drone.dto.DroneDto;
 import com.musala.drone.dto.MedicationDto;
 import com.musala.drone.transformer.DroneTransformer;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,16 +17,12 @@ import java.util.List;
  * @description
  */
 @Service
+@AllArgsConstructor
 public class DroneServiceImpl implements DroneService {
     private final DroneTransformer droneTransformer;
     private final DroneDao droneDao;
     private final MessageService messageService;
-
-    public DroneServiceImpl(DroneTransformer droneTransformer, DroneDao droneDao, MessageService messageService) {
-        this.droneTransformer = droneTransformer;
-        this.droneDao = droneDao;
-        this.messageService = messageService;
-    }
+    private final MedicationService medicationService;
 
     @Override
     public DroneTransformer getTransformer() {
@@ -54,9 +51,8 @@ public class DroneServiceImpl implements DroneService {
     @Override
     public DroneDto loadMedicationItems(long droneId, List<MedicationDto> medicationDtos) {
         DroneDto droneDto=findById(droneId);
-
-        return null;
+        List<MedicationDto> addedMeditations=medicationService.loadMedicationItems(droneDto,medicationDtos);
+        droneDto.setMedicationDtoList(addedMeditations);
+        return droneDto;
     }
-
-
 }

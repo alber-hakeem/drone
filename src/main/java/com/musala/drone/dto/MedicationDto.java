@@ -23,5 +23,6 @@ public class MedicationDto extends BaseDto {
     private float weight;
     private String code;
     private String imageUrl;
+    private DroneDto droneDto;
 
 }

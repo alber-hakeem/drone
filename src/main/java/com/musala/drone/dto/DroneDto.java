@@ -11,6 +11,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 /**
  * @author Alber Rashad
@@ -38,5 +39,7 @@ public class DroneDto extends BaseDto {
     private float weightLimit;
 
     private Integer batteryCapacity;
+
+    private List<MedicationDto> medicationDtoList;
 
 }

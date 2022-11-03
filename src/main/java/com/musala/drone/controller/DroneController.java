@@ -40,7 +40,7 @@ public class DroneController implements BaseController<DroneService, DroneDto> {
 
     @PostMapping("load-medication-items/{droneId}")
     public ApiResponse<DroneDto> loadMedicationItems(@PathVariable Long droneId,@RequestBody List<MedicationDto> medicationDtos) {
-        return getApiResponseBuilder().buildApiSuccessResponse(getService().create(droneDto));
+        return getApiResponseBuilder().buildApiSuccessResponse(getService().loadMedicationItems(droneId,medicationDtos));
     }
 
     @Override
