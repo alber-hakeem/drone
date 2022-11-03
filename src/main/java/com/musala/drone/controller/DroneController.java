@@ -4,6 +4,7 @@ import com.musala.drone.base.api.response.ApiResponse;
 import com.musala.drone.base.api.response.ApiResponseBuilder;
 import com.musala.drone.base.controller.BaseController;
 import com.musala.drone.dto.DroneDto;
+import com.musala.drone.dto.MedicationDto;
 import com.musala.drone.service.DroneService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +36,11 @@ public class DroneController implements BaseController<DroneService, DroneDto> {
     @GetMapping("/battery-capacity/{droneId}")
     public ApiResponse<List<DroneDto>> findDroneBatteryCapacity(@PathVariable Long droneId){
         return getApiResponseBuilder().buildApiSuccessResponse(getService().findBatteryCapacity(droneId));
+    }
+
+    @PostMapping("load-medication-items/{droneId}")
+    public ApiResponse<DroneDto> loadMedicationItems(@PathVariable Long droneId,@RequestBody List<MedicationDto> medicationDtos) {
+        return getApiResponseBuilder().buildApiSuccessResponse(getService().create(droneDto));
     }
 
     @Override

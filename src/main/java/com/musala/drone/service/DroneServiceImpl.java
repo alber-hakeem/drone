@@ -4,6 +4,7 @@ import com.musala.drone.base.service.MessageService;
 import com.musala.drone.dao.DroneDao;
 import com.musala.drone.dto.DroneBatteryCapacityDto;
 import com.musala.drone.dto.DroneDto;
+import com.musala.drone.dto.MedicationDto;
 import com.musala.drone.transformer.DroneTransformer;
 import org.springframework.stereotype.Service;
 
@@ -49,4 +50,13 @@ public class DroneServiceImpl implements DroneService {
     public DroneBatteryCapacityDto findBatteryCapacity(Long droneId) {
         return getDao().findBatteryCapacity(droneId);
     }
+
+    @Override
+    public DroneDto loadMedicationItems(long droneId, List<MedicationDto> medicationDtos) {
+        DroneDto droneDto=findById(droneId);
+
+        return null;
+    }
+
+
 }

@@ -8,6 +8,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 /**
  * @author Alber Rashad
@@ -44,5 +45,15 @@ public class Drone extends BaseEntity {
 
     @Column(name = "battery_capacity")
     private Integer batteryCapacity;
+
+    @OneToMany(mappedBy = "drone",
+            fetch = FetchType.LAZY)
+    List<Medication> medicationList;
+
+    public void setDroneToMedication() {
+        if (this.getMedicationList() != null)
+            this.getMedicationList().forEach(medication -> medication.setDrone(this));
+    }
+
 
 }
