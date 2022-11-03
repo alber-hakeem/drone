@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS public.drone
     created_by character varying(100),
     modified_by character varying(100),
     marked_as_deleted boolean   default false,
-    CONSTRAINT drone_pkey PRIMARY KEY (id),
+    CONSTRAINT drone_pkey PRIMARY KEY (id)
 )
 
 TABLESPACE pg_default;

@@ -2,8 +2,12 @@ package com.musala.drone.service;
 
 import com.musala.drone.base.service.MessageService;
 import com.musala.drone.dao.DroneDao;
+import com.musala.drone.dto.DroneBatteryCapacityDto;
+import com.musala.drone.dto.DroneDto;
 import com.musala.drone.transformer.DroneTransformer;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author Alber Rashad
@@ -35,5 +39,14 @@ public class DroneServiceImpl implements DroneService {
     @Override
     public MessageService getMessageService() {
         return messageService;
+    }
+
+    @Override
+    public List<DroneDto> findAllAvailableDrone() {
+        return getTransformer().transformEntityToDTO(getDao().findAllAvailableDrone());
+    }
+    @Override
+    public DroneBatteryCapacityDto findBatteryCapacity(Long droneId) {
+        return getDao().findBatteryCapacity(droneId);
     }
 }

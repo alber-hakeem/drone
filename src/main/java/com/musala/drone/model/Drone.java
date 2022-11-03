@@ -43,6 +43,6 @@ public class Drone extends BaseEntity {
     private Integer weightLimit;
 
     @Column(name = "battery_capacity")
-    private float batteryCapacity;
+    private Integer batteryCapacity;
 
 }
