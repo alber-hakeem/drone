@@ -7,5 +7,5 @@
     <include file="db/changelog/20221102_message_table_and_seq.sql"/>
     <include file="/db/changelog/20210112_messages.xml"/>
     <include file="db/changelog/20221103_drone_table_and_seq.sql"/>
-
+    <include file="db/changelog/20221103_medication_table_and_seq.sql"/>
 </databaseChangeLog>
