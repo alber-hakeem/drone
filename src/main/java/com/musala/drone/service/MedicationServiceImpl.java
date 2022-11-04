@@ -1,11 +1,10 @@
 package com.musala.drone.service;
 
 import com.musala.drone.base.service.MessageService;
-import com.musala.drone.dao.DroneDao;
+import com.musala.drone.dao.MedicationDao;
 import com.musala.drone.dto.DroneDto;
 import com.musala.drone.dto.MedicationDto;
-import com.musala.drone.model.Medication;
-import com.musala.drone.transformer.DroneTransformer;
+import com.musala.drone.transformer.MedicationTransformer;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,33 +18,26 @@ import java.util.List;
 @AllArgsConstructor
 @Service
 public class MedicationServiceImpl implements MedicationService{
-    private final DroneTransformer droneTransformer;
-    private final DroneDao droneDao;
+    private final MedicationTransformer medicationTransformer;
+    private final MedicationDao medicationDao;
     private final MessageService messageService;
 
-
-
     @Override
-    public DroneTransformer getTransformer() {
-        return droneTransformer;
+    public MedicationTransformer getTransformer() {
+        return medicationTransformer;
     }
     @Override
-    public DroneDao getDao() {
-        return droneDao;
+    public MedicationDao getDao() {
+        return medicationDao;
     }
     @Override
     public MessageService getMessageService() {
         return messageService;
     }
 
-
-
     @Override
     public List<MedicationDto> loadMedicationItems(DroneDto droneDto, List<MedicationDto> medicationDtos) {
-
-        medicationDtos.forEach(medicationDto -> {
-            medicationDto.setDroneDto(droneDto);
-        });
+        medicationDtos.forEach(medicationDto -> medicationDto.setDrone(droneDto));
         return create(medicationDtos);
     }
 }

@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS public.medication
     name character varying(250) COLLATE pg_catalog."default" NOT NULL,
     code character varying(250) COLLATE pg_catalog."default" NOT NULL,
     weight float NOT NULL,
-    imageUrl character varying COLLATE pg_catalog."default",
+    image_url character varying COLLATE pg_catalog."default",
     drone_id bigint NOT NULL,
     created_date timestamp,
     modified_date timestamp,

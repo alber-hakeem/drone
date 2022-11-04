@@ -9,6 +9,7 @@ import com.musala.drone.service.DroneService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -25,7 +26,7 @@ public class DroneController implements BaseController<DroneService, DroneDto> {
 
 
     @PostMapping
-    public ApiResponse<DroneDto> create(@RequestBody DroneDto droneDto) {
+    public ApiResponse<DroneDto> create(@Valid @RequestBody DroneDto droneDto) {
         return getApiResponseBuilder().buildApiSuccessResponse(getService().create(droneDto));
     }
 
@@ -39,7 +40,7 @@ public class DroneController implements BaseController<DroneService, DroneDto> {
     }
 
     @PostMapping("load-medication-items/{droneId}")
-    public ApiResponse<DroneDto> loadMedicationItems(@PathVariable Long droneId,@RequestBody List<MedicationDto> medicationDtos) {
+    public ApiResponse<DroneDto> loadMedicationItems(@PathVariable Long droneId,@Valid @RequestBody List<MedicationDto> medicationDtos) {
         return getApiResponseBuilder().buildApiSuccessResponse(getService().loadMedicationItems(droneId,medicationDtos));
     }
 

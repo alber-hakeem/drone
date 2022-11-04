@@ -26,7 +26,7 @@ public class DroneDto extends BaseDto {
 
     private Long id;
 
-    @Size(max = 100)
+    @Size(max = 100,message = "Max allowed characters are 100")
     private String serialNumber;
 
     @Enumerated(EnumType.STRING)
@@ -35,7 +35,7 @@ public class DroneDto extends BaseDto {
     @Enumerated(EnumType.STRING)
     private DroneState state;
 
-    @Max(500)
+    @Max(value = 500,message = "Max allowed weight is 500")
     private float weightLimit;
 
     private Integer batteryCapacity;
