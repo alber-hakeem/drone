@@ -6,6 +6,7 @@ import com.musala.drone.enums.DroneState;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -38,6 +39,7 @@ public class DroneDto extends BaseDto {
     @Max(value = 500,message = "Max allowed weight is 500")
     private float weightLimit;
 
+    @Range(min = 0,max = 100)
     private Integer batteryCapacity;
 
     private List<MedicationDto> medicationDtoList;
