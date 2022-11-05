@@ -1,0 +1,6 @@
+1- create Postgres db and call it drone
+2- change db url and credentials from the properties file
+3- run the project
+4- create drone http://localhost:80/api/drone
+5- create medication http://localhost:80/api/medication
+6- load the drone http://localhost:80/api/drone/load-medication-items/1
