@@ -37,8 +37,8 @@ public class Medication extends BaseEntity {
     @Column(name = "image_url")
     private String imageUrl;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "drone_id", referencedColumnName = "id")
-    private Drone drone;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "drone_id", referencedColumnName = "id")
+//    private Drone drone;
 
 }

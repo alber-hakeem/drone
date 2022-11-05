@@ -21,13 +21,13 @@ import javax.validation.constraints.Pattern;
 public class MedicationDto extends BaseDto {
 
     private Long id;
-    @Pattern(regexp = "\\w+-", message = "Invalid name!")
+    @Pattern(regexp = "[\\w-]+", message = "Invalid name!")
     private String name;
 
     @Max(value = 500,message = "Max allowed weight is 500")
     private float weight;
     private String code;
     private String imageUrl;
-    private DroneDto drone;
+//    private DroneDto drone;
 
 }
