@@ -17,14 +17,12 @@ CREATE TABLE IF NOT EXISTS public.medication
     code character varying(250) COLLATE pg_catalog."default" NOT NULL,
     weight float NOT NULL,
     image_url character varying COLLATE pg_catalog."default",
-    drone_id bigint NOT NULL,
     created_date timestamp,
     modified_date timestamp,
     created_by character varying(100),
     modified_by character varying(100),
     marked_as_deleted boolean   default false,
-    CONSTRAINT medication_pkey PRIMARY KEY (id),
-    CONSTRAINT drone_id_fk FOREIGN KEY (drone_id) REFERENCES public.drone (id)
+    CONSTRAINT medication_pkey PRIMARY KEY (id)
  )
 TABLESPACE pg_default;
 
