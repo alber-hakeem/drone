@@ -14,5 +14,4 @@ import java.util.List;
  * @description
  */
 public interface MedicationService extends BaseService<Medication, MedicationDto, MedicationTransformer, MedicationDao> {
-     List<MedicationDto> loadMedicationItems(DroneDto droneDto, List<MedicationDto> medicationDtos);
 }

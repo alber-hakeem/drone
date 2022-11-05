@@ -35,9 +35,4 @@ public class MedicationServiceImpl implements MedicationService{
         return messageService;
     }
 
-    @Override
-    public List<MedicationDto> loadMedicationItems(DroneDto droneDto, List<MedicationDto> medicationDtos) {
-      //  medicationDtos.forEach(medicationDto -> medicationDto.setDrone(droneDto));
-        return create(medicationDtos);
-    }
 }

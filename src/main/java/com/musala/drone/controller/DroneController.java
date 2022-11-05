@@ -4,7 +4,6 @@ import com.musala.drone.base.api.response.ApiResponse;
 import com.musala.drone.base.api.response.ApiResponseBuilder;
 import com.musala.drone.base.controller.BaseController;
 import com.musala.drone.dto.DroneDto;
-import com.musala.drone.dto.MedicationDto;
 import com.musala.drone.service.DroneService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
