@@ -3,7 +3,6 @@ package com.musala.drone.service;
 import com.musala.drone.base.service.MessageService;
 import com.musala.drone.dao.MedicationDao;
 import com.musala.drone.dto.DroneDto;
-import com.musala.drone.dto.MedicationDto;
 import com.musala.drone.transformer.MedicationTransformer;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

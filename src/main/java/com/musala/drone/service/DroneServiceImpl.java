@@ -8,9 +8,9 @@ import com.musala.drone.dto.DroneMedicationDto;
 import com.musala.drone.dto.MedicationDto;
 import com.musala.drone.enums.DroneState;
 import com.musala.drone.transformer.DroneTransformer;
-import com.musala.drone.validation.DroneLoadValidation;
 import com.musala.drone.validation.DroneLoadValidationChain;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedHashSet;
@@ -25,6 +25,7 @@ import java.util.Set;
  */
 @Service
 @AllArgsConstructor
+@Slf4j
 public class DroneServiceImpl implements DroneService {
     private final DroneTransformer droneTransformer;
     private final DroneDao droneDao;
@@ -58,6 +59,7 @@ public class DroneServiceImpl implements DroneService {
 
     @Override
     public DroneDto loadMedicationItems(long droneId, Set<Long> medicationIds) {
+        log.info("loadMedicationItems get Called");
         DroneDto droneDto=findById(droneId);
         Set<MedicationDto> medicationDtoSet=getMedicationDtosSet(medicationIds);
         validateLoadingProcess(droneDto, medicationDtoSet);
@@ -70,6 +72,7 @@ public class DroneServiceImpl implements DroneService {
 
         droneDto.setMedicationDtoList(medicationDtoSet);
 
+        log.info("Drone " + droneDto.getId() +" Loaded");
         return droneDto;
 
     }
