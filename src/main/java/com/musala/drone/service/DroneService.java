@@ -10,6 +10,7 @@ import com.musala.drone.model.Medication;
 import com.musala.drone.transformer.DroneTransformer;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Alber Rashad
@@ -19,5 +20,5 @@ import java.util.List;
 public interface DroneService extends BaseService<Drone, DroneDto, DroneTransformer, DroneDao> {
     List<DroneDto> findAllAvailableDrone();
     DroneBatteryCapacityDto findBatteryCapacity(Long droneId);
-    DroneDto loadMedicationItems (long droneId, List<MedicationDto> medicationDtos);
+    DroneDto loadMedicationItems (long droneId, Set<Long> medicationIds);
 }

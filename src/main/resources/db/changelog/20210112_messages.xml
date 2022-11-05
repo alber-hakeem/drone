@@ -36,13 +36,6 @@
             <column name="type" value="BACK_END"/>
         </insert>
         <insert tableName="locale_message">
-            <column name="code" value="PARAMETER_MISMATCH"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="The parameter '%s' of value '%s' could not be converted to type '%s'"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
             <column name="code" value="MALFORMED_JSON_REQUEST"/>
             <column name="module" value="CORE"/>
             <column name="message" value="Malformed JSON request"/>
@@ -56,80 +49,15 @@
             <column name="lang" value="EN"/>
             <column name="type" value="BACK_END"/>
         </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="USERNAME_IS_MISSING"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="Username is empty"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="USER_IS_NOT_FOUND"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="User is not found"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="PASSWORD_EMPTY"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="Password can't be empty"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="UNAUTHORIZED"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="Authentication is required"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="FORBIDDEN"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="Access is forbidden"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="UNEXPECTED_ERROR"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="Unexpected error has occurred!"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="VALIDATION_ERROR"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="Validation Error!"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="TRANSACTION_SYSTEM_ERROR"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="General transaction system error is encountered!"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="USER_ALREADY_EXIST"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="User already exist!"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
+
+
+
+
+
         <insert tableName="locale_message">
             <column name="code" value="Item_IS_NOT_FOUND"/>
             <column name="module" value="CORE"/>
             <column name="message" value="Item is not found"/>
-            <column name="lang" value="EN"/>
-            <column name="type" value="BACK_END"/>
-        </insert>
-        <insert tableName="locale_message">
-            <column name="code" value="INCORRECT_USERNAME_OR_PASSWORD"/>
-            <column name="module" value="CORE"/>
-            <column name="message" value="Incorrect username or password"/>
             <column name="lang" value="EN"/>
             <column name="type" value="BACK_END"/>
         </insert>
@@ -165,6 +93,29 @@
             <column name="code" value="REQUEST_FAILED"/>
             <column name="module" value="CORE"/>
             <column name="message" value="Failed!"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+
+
+        <insert tableName="locale_message">
+            <column name="code" value="DRONE_IS_NOT_IN_VAlID_STATE"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Drone is not in a valid state to be loaded"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="DRONE_BATTERY_IS_LOW"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Drone Battery is low"/>
+            <column name="lang" value="EN"/>
+            <column name="type" value="BACK_END"/>
+        </insert>
+        <insert tableName="locale_message">
+            <column name="code" value="LOAD_IS_OVER_WEIGHT"/>
+            <column name="module" value="CORE"/>
+            <column name="message" value="Load is over weight"/>
             <column name="lang" value="EN"/>
             <column name="type" value="BACK_END"/>
         </insert>

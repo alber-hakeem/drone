@@ -13,6 +13,7 @@ import javax.persistence.Enumerated;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Size;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Alber Rashad
@@ -42,6 +43,6 @@ public class DroneDto extends BaseDto {
     @Range(min = 0,max = 100)
     private Integer batteryCapacity;
 
-    private List<MedicationDto> medicationDtoList;
+    private Set<MedicationDto> medicationDtoList;
 
 }

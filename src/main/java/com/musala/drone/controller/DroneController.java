@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Alber Rashad
@@ -29,6 +30,10 @@ public class DroneController implements BaseController<DroneService, DroneDto> {
     public ApiResponse<DroneDto> create(@Valid @RequestBody DroneDto droneDto) {
         return getApiResponseBuilder().buildApiSuccessResponse(getService().create(droneDto));
     }
+    @GetMapping
+    public ApiResponse<List<DroneDto>> findAll(){
+        return getApiResponseBuilder().buildApiSuccessResponse(getService().findAll());
+    }
 
     @GetMapping("/available-drones")
     public ApiResponse<List<DroneDto>> findAvailableDrones(){
@@ -40,10 +45,14 @@ public class DroneController implements BaseController<DroneService, DroneDto> {
     }
 
     @PostMapping("load-medication-items/{droneId}")
-    public ApiResponse<DroneDto> loadMedicationItems(@PathVariable Long droneId,@Valid @RequestBody List<MedicationDto> medicationDtos) {
-        return getApiResponseBuilder().buildApiSuccessResponse(getService().loadMedicationItems(droneId,medicationDtos));
+    public ApiResponse<DroneDto> loadMedicationItems(@PathVariable Long droneId, @RequestBody Set<Long> medicationDtoIds) {
+        return getApiResponseBuilder().buildApiSuccessResponse(getService().loadMedicationItems(droneId,medicationDtoIds));
     }
 
+    @PutMapping("/{droneId}")
+    public ApiResponse<DroneDto> update(@PathVariable Long droneId, @RequestBody DroneDto droneDto) {
+        return getApiResponseBuilder().buildApiSuccessResponse(getService().update(droneDto,droneId));
+    }
     @Override
     public DroneService getService() {
         return droneService;

@@ -46,14 +46,14 @@ public class Drone extends BaseEntity {
     @Column(name = "battery_capacity")
     private Integer batteryCapacity;
 
-    @OneToMany(mappedBy = "drone",
-            fetch = FetchType.LAZY)
-    List<Medication> medicationList;
-
-    public void setDroneToMedication() {
-        if (this.getMedicationList() != null)
-            this.getMedicationList().forEach(medication -> medication.setDrone(this));
-    }
+//    @OneToMany(mappedBy = "drone",
+//            fetch = FetchType.LAZY)
+//    List<Medication> medicationList;
+//
+//    public void setDroneToMedication() {
+//        if (this.getMedicationList() != null)
+//            this.getMedicationList().forEach(medication -> medication.setDrone(this));
+//    }
 
 
 }
