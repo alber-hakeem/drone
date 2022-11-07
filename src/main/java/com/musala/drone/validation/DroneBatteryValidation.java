@@ -1,11 +1,9 @@
 package com.musala.drone.validation;
 
 import com.musala.drone.base.exception.custom.BusinessException;
-import com.musala.drone.base.service.MessageService;
 import com.musala.drone.constant.MessageConstants;
 import com.musala.drone.dto.DroneDto;
 import com.musala.drone.dto.MedicationDto;
-import com.musala.drone.enums.DroneState;
 
 import java.util.Set;
 
@@ -26,7 +24,7 @@ public class DroneBatteryValidation implements DroneLoadValidation{
 
     @Override
     public void validate(DroneDto droneDto, Set<MedicationDto> medicationDtos) {
-        if(!droneDto.getState().equals(DroneState.IDLE))
+        if(droneDto.getBatteryCapacity().intValue()<=25)
             throw new BusinessException(MessageConstants.DRONE_BATTERY_IS_LOW);
         else
             this.nextValidation.validate(droneDto,medicationDtos);
